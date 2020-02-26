@@ -1,0 +1,25 @@
+{
+    "type": "module",
+    "name": "panfilemd5sort",
+    "version": "1.0.0",
+    "types": "index.d.ts",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+        "@types/mongodb": "^3.3.16",
+        "@types/node": "^13.7.6",
+        "@types/prettier": "^1.19.0",
+        "mongodb": "^3.5.4",
+        "prettier": "^1.19.1",
+        "tslib": "^1.11.0",
+        "typescript": "^3.8.2"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "build": "tsc",
+        "start": "node index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "description": ""
+}
