@@ -1,6 +1,6 @@
 {
     "type": "module",
-    "name": "panfilemd5sort",
+    "name": "pan-file-find-md5-repeat",
     "version": "1.0.0",
     "types": "index.d.ts",
     "main": "index.js",
@@ -20,6 +20,14 @@
         "start": "node cli.js"
     },
     "keywords": [],
-    "author": "",
-    "description": ""
+    "author": "masx200 <34191203+masx200@users.noreply.github.com>",
+    "description": "从本地 `mongodb` 数据库中查找保存的文件信息中有 `md5` 重复的文件",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/masx200/pan-file-find-md5-repeat.git"
+    },
+    "bugs": {
+        "url": "https://github.com/masx200/pan-file-find-md5-repeat/issues"
+    },
+    "homepage": "https://github.com/masx200/pan-file-find-md5-repeat#readme"
 }

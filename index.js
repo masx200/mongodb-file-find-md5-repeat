@@ -1,8 +1,8 @@
-import prettier from "prettier";
-const logfile = `./output/data-${new Date().getTime()}.json`;
 import { promises as fspromises } from "fs";
 import mongodb from "mongodb";
+import prettier from "prettier";
 import process from "process";
+const logfile = `./output/data-${new Date().getTime()}.json`;
 process.on("unhandledRejection", err => {
     throw err;
 });
