@@ -17,7 +17,7 @@
     "devDependencies": {},
     "scripts": {
         "build": "tsc",
-        "start": "node cli.js"
+        "start": "node --experimental-modules cli.js"
     },
     "keywords": [],
     "author": "masx200 <34191203+masx200@users.noreply.github.com>",
