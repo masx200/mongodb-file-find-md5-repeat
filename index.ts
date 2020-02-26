@@ -1,8 +1,8 @@
-import prettier from "prettier";
-const logfile = `./output/data-${new Date().getTime()}.json`;
 import { promises as fspromises } from "fs";
 import mongodb from "mongodb";
+import prettier from "prettier";
 import process from "process";
+const logfile = `./output/data-${new Date().getTime()}.json`;
 // const dbname = "pan_masx20";
 // const collectionname = "panfile";
 process.on("unhandledRejection", err => {
