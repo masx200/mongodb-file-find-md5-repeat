@@ -1,1 +1,1 @@
-export {};
+export default function start(dbname: string, collectionname: string): Promise<void>;

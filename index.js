@@ -3,25 +3,25 @@ const logfile = `./output/data-${new Date().getTime()}.json`;
 import { promises as fspromises } from "fs";
 import mongodb from "mongodb";
 import process from "process";
-const dbname = "pan_masx20";
-const collectionname = "panfile";
 process.on("unhandledRejection", err => {
     throw err;
 });
+export default async function start(dbname, collectionname) {
+    MongoClient.connect("mongodb://127.0.0.1:27017/?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false", { useNewUrlParser: true, useUnifiedTopology: true }, async function (connectErr, client) {
+        if (connectErr) {
+            throw connectErr;
+        }
+        const coll = client.db(dbname).collection(collectionname);
+        let readableCursor = coll.find(filter, { sort: sort });
+        handlecursor(readableCursor);
+    });
+}
 const { MongoClient } = mongodb;
 const filter = {};
 const sort = {
     md5: 1
 };
 const alldatamap = new Map();
-MongoClient.connect("mongodb://127.0.0.1:27017/?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false", { useNewUrlParser: true, useUnifiedTopology: true }, async function (connectErr, client) {
-    if (connectErr) {
-        throw connectErr;
-    }
-    const coll = client.db(dbname).collection(collectionname);
-    let readableCursor = coll.find(filter, { sort: sort });
-    handlecursor(readableCursor);
-});
 async function handlecursor(readableCursor) {
     await fspromises.writeFile(logfile, `[`);
     for await (let doc of readableCursor) {
