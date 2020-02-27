@@ -1,6 +1,6 @@
-# pan-file-find-md5-repeat
+# mongodb-file-find-md5-repeat
 
-从本地 `mongodb` 数据库中查找保存的文件信息中有 `md5` 重复的文件
+从本地 `mongodb` 数据库中查找保存的文件信息中有 校验码 重复的文件
 
 本地 `mongodb` 数据库中需要有一张表,有`md5`和`path`字段
 
