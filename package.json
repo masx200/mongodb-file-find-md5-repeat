@@ -1,6 +1,6 @@
 {
     "type": "module",
-    "name": "pan-file-find-md5-repeat",
+    "name": "mongodb-file-find-md5-repeat",
     "version": "1.0.0",
     "types": "index.d.ts",
     "main": "index.js",
