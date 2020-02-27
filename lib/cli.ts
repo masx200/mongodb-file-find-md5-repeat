@@ -13,7 +13,7 @@ if (db && collect) {
         "从本地 `mongodb` 数据库中查找保存的文件信息中有 `md5` 重复的文件"
     );
     console.error("示例:");
-    console.error(`node ./cli.js --db=pan_masx20 --collect=panfile`);
+    console.error(`node ./lib/cli.js --db=pan_masx20 --collect=panfile`);
 
     console.error("输入的参数有误!");
     process.exit(1);

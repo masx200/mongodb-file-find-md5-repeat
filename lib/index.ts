@@ -1,8 +1,17 @@
+import { fileURLToPath } from "url";
+import path, { dirname } from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 import { promises as fspromises } from "fs";
 import mongodb from "mongodb";
 import prettier from "prettier";
 import process from "process";
-const logfile = `./output/data-${new Date().getTime()}.json`;
+const logfile = path.resolve(
+    __dirname,
+    "../",
+    `./output/data-${new Date().getTime()}.json`
+);
 // const dbname = "pan_masx20";
 // const collectionname = "panfile";
 process.on("unhandledRejection", err => {
@@ -28,8 +37,9 @@ const sort = {
     md5: 1
 };
 const alldatamap = new Map<string, Set<string>>();
-
+import fsextra from "fs-extra";
 async function handlecursor(readableCursor: mongodb.Cursor<any>) {
+    await fsextra.ensureDir(path.dirname(logfile));
     await fspromises.writeFile(logfile, `[`);
     for await (let doc of readableCursor) {
         const { path, md5 } = doc;

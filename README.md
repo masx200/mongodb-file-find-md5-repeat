@@ -37,5 +37,5 @@ yarn start
 必选参数 `collect`:数据库中集合的名称 `string`
 
 ```shell
-node ./cli.js --db=pan_masx20 --collect=panfile
+node ./lib/cli.js --db=pan_masx20 --collect=panfile
 ```
