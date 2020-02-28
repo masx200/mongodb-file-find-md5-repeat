@@ -18,6 +18,7 @@
     },
     "devDependencies": {},
     "scripts": {
+        "pretttier": "prettier --write *.json *.md ./**/*.ts",
         "build": "tsc",
         "start": "node --experimental-modules lib/cli.js"
     },
