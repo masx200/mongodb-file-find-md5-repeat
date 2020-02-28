@@ -44,6 +44,13 @@ node ./lib/cli.js --db=pan_masx20 --collect=panfile
 
 # 输出重复文件列表举例
 
+```ts
+type repeatfiles = [hash, path[]][];
+
+type hash = string;
+type path = string;
+```
+
 ```json
 [
     [
