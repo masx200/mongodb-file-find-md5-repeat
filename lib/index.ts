@@ -17,19 +17,26 @@ const logfile = path.resolve(
 process.on("unhandledRejection", err => {
     throw err;
 });
-export default async function start(dbname: string, collectionname: string) {
-    MongoClient.connect(
-        "mongodb://127.0.0.1:27017/?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false",
-        { useNewUrlParser: true, useUnifiedTopology: true },
-        async function(connectErr, client) {
-            if (connectErr) {
-                throw connectErr;
+export default async function start(
+    dbname: string,
+    collectionname: string
+): Promise<string> {
+    return new Promise(r => {
+        MongoClient.connect(
+            "mongodb://127.0.0.1:27017/?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false",
+            { useNewUrlParser: true, useUnifiedTopology: true },
+            async function(connectErr, client) {
+                if (connectErr) {
+                    throw connectErr;
+                }
+                const coll = client.db(dbname).collection(collectionname);
+                let readableCursor = coll.find(filter, { sort: sort });
+                await handlecursor(readableCursor);
+                await client.close();
+                r(logfile);
             }
-            const coll = client.db(dbname).collection(collectionname);
-            let readableCursor = coll.find(filter, { sort: sort });
-            handlecursor(readableCursor);
-        }
-    );
+        );
+    });
 }
 const { MongoClient } = mongodb;
 const filter = {};
@@ -74,5 +81,5 @@ async function handlecursor(readableCursor: mongodb.Cursor<any>) {
         tabWidth: 4
     });
     await fspromises.writeFile(logfile, formattedstring);
-    process.exit();
+    // process.exit();
 }

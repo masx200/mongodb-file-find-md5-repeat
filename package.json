@@ -1,7 +1,7 @@
 {
     "type": "module",
-    "name": "mongodb-file-find-md5-repeat",
-    "version": "1.0.0",
+    "name": "@masx200/mongodb-file-find-md5-repeat",
+    "version": "1.0.1",
     "types": "lib/index.d.ts",
     "main": "lib/index.js",
     "license": "MIT",
