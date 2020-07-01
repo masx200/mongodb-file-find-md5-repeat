@@ -51,7 +51,7 @@ async function handlecursor(readableCursor: mongodb.Cursor<any>) {
     for await (let doc of readableCursor) {
         const { path, md5 } = doc;
 
-        console.log(md5, path);
+        // console.log(md5, path);
         if (!md5 || !path) {
             throw new TypeError("数据库中没有找到需要的数据 md5 , path");
         }
