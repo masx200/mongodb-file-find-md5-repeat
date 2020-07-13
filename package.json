@@ -4,7 +4,7 @@
     },
     "type": "module",
     "name": "@masx200/mongodb-file-find-md5-repeat",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "types": "lib/index.d.ts",
     "main": "lib/index.js",
     "license": "MIT",
@@ -14,12 +14,15 @@
         "@types/node": "^14.0.14",
         "@types/prettier": "^2.0.1",
         "fs-extra": "^9.0.1",
-        "mongodb": "^3.5.9",
-        "prettier": "^2.0.5",
+        "mongodb": "^3.5.9"
+        
+    },
+    "devDependencies": {
+
+"prettier": "^2.0.5",
         "tslib": "^2.0.0",
         "typescript": "^3.9.5"
-    },
-    "devDependencies": {},
+},
     "scripts": {
         "pretttier": "prettier --write *.json *.md ./**/*.ts",
         "build": "tsc",
