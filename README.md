@@ -49,7 +49,7 @@ yarn start
 必选参数 `collect`:数据库中集合的名称 `string`
 
 ```shell
-node ./lib/cli.js --db=pan_masx20 --collect=panfile
+node ./lib/cli.js --db=baidupan --collect=panfile
 ```
 
 # 输出重复文件列表举例
