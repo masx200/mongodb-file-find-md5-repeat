@@ -48,6 +48,11 @@ yarn start
 
 必选参数 `collect`:数据库中集合的名称 `string`
 
+
+可选参数 `mongourl`：mongodb数据库的URL
+
+
+
 ```shell
 node ./lib/cli.js --db=baidupan --collect=panfile
 ```
