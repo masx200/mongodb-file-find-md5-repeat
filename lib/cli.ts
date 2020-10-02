@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import process from "process";
 import start from "./index.js";
-import { parseargs } from "./parse-args.js";
+import  parseargs from " @masx200/mini-cli-args-parser";
 const argsobj = parseargs(process.argv.slice(2));
 const { db, collect } = argsobj;
 
