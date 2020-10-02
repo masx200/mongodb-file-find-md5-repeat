@@ -1,12 +1,13 @@
-import { fileURLToPath } from "url";
+import { promises as fspromises } from "fs";
+import fsextra from "fs-extra";
+import mongodb from "mongodb";
 import path, { dirname } from "path";
+import prettier from "prettier";
+import process from "process";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-import { promises as fspromises } from "fs";
-import mongodb from "mongodb";
-import prettier from "prettier";
-import process from "process";
 const logfile = path.resolve(
     __dirname,
     "../",
@@ -44,7 +45,6 @@ const sort = {
     md5: 1
 };
 const alldatamap = new Map<string, Set<string>>();
-import fsextra from "fs-extra";
 async function handlecursor(readableCursor: mongodb.Cursor<any>) {
     await fsextra.ensureDir(path.dirname(logfile));
     await fspromises.writeFile(logfile, `[`);
