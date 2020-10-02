@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@masx200/mini-cli-args-parser@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@masx200/mini-cli-args-parser/-/mini-cli-args-parser-1.0.2.tgz#bedbdc1dc713f6f9b5a1a35f66b5dd6c48dd85f2"
+  integrity sha512-NC+26pSSQ4c3ShygzXkUCKV1JvjSvHMqOIn3isgoZf8YHxB81Q8YmNy5pLug4FjmPFoOjZ4fsGEyCi9/p8qpzQ==
+
 "@types/bson@*":
   version "4.0.1"
   resolved "https://registry.npmjs.org/@types/bson/-/bson-4.0.1.tgz#2bfc80819e7055b76d5496d5344ed23e5d12bbb2"
@@ -16,10 +21,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/mongodb@^3.5.25":
-  version "3.5.25"
-  resolved "https://registry.npm.taobao.org/@types/mongodb/download/@types/mongodb-3.5.25.tgz#ab187db04d79f8e3f15af236327dc9139d9d4736"
-  integrity sha1-qxh9sE15+OPxWvI2Mn3JE52dRzY=
+"@types/mongodb@^3.5.27":
+  version "3.5.27"
+  resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-3.5.27.tgz#158a7a43ce25ef3592ac8a62e62ab38bebf661f2"
+  integrity sha512-1jxKDgdfJEOO9zp+lv43p8jOqRs02xPrdUTzAZIVK9tVEySfCEmktL2jEu9A3wOBEOs18yKzpVIKUh8b8ALk3w==
   dependencies:
     "@types/bson" "*"
     "@types/node" "*"
@@ -29,22 +34,22 @@
   resolved "https://registry.npmjs.org/@types/node/-/node-13.7.6.tgz#cb734a7c191472ae6a2b3a502b4dfffcea974113"
   integrity sha512-eyK7MWD0R1HqVTp+PtwRgFeIsemzuj4gBFSQxfPHY5iMjS7474e5wq+VFgTcdpyHeNxyKSaetYAjdMLJlKoWqA==
 
-"@types/node@^14.0.14":
-  version "14.0.14"
-  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-14.0.14.tgz?cache=0&sync_timestamp=1592987751085&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.0.14.tgz#24a0b5959f16ac141aeb0c5b3cd7a15b7c64cbce"
-  integrity sha1-JKC1lZ8WrBQa6wxbPNehW3xky84=
+"@types/node@^14.11.2":
+  version "14.11.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.11.2.tgz#2de1ed6670439387da1c9f549a2ade2b0a799256"
+  integrity sha512-jiE3QIxJ8JLNcb1Ps6rDbysDhN4xa8DJJvuC9prr6w+1tIh+QAbYyNF3tyiZNLDBIuBCf4KEcV2UvQm/V60xfA==
 
-"@types/prettier@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.npm.taobao.org/@types/prettier/download/@types/prettier-2.0.1.tgz#b6e98083f13faa1e5231bfa3bdb1b0feff536b6d"
-  integrity sha1-tumAg/E/qh5SMb+jvbGw/v9Ta20=
+"@types/prettier@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.1.1.tgz#be148756d5480a84cde100324c03a86ae5739fb5"
+  integrity sha512-2zs+O+UkDsJ1Vcp667pd3f8xearMdopz/z54i99wtRDI5KLmngk7vlrYZD0ZjKHaROR03EznlBbVY9PfAEyJIQ==
 
 at-least-node@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/at-least-node/download/at-least-node-1.0.0.tgz#602cd4b46e844ad4effc92a8011a3c46e0238dc2"
   integrity sha1-YCzUtG6EStTv/JKoARo8RuAjjcI=
 
-bl@^2.2.0:
+bl@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/bl/-/bl-2.2.1.tgz#8c11a7b730655c5d56898cdc871224f40fd901d5"
   integrity sha512-6Pesp1w0DEX1N550i/uGV/TqucVL4AM/pgThFSN/Qq9si1/DF9aIHs1BxD8V/QU0HoeHO6cQRTAuYnLPKq1e4g==
@@ -106,12 +111,12 @@ memory-pager@^1.0.2:
   resolved "https://registry.npmjs.org/memory-pager/-/memory-pager-1.5.0.tgz#d8751655d22d384682741c972f2c3d6dfa3e66b5"
   integrity sha512-ZS4Bp4r/Zoeq6+NLJpP+0Zzm0pR8whtGPf1XExKLJBAczGMnSi3It14OiNCStjQjM6NU1okjQGSxgEZN8eBYKg==
 
-mongodb@^3.5.9:
-  version "3.5.9"
-  resolved "https://registry.npm.taobao.org/mongodb/download/mongodb-3.5.9.tgz?cache=0&sync_timestamp=1591968030609&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmongodb%2Fdownload%2Fmongodb-3.5.9.tgz#799b72be8110b7e71a882bb7ce0d84d05429f772"
-  integrity sha1-eZtyvoEQt+caiCu3zg2E0FQp93I=
+mongodb@^3.6.2:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.6.2.tgz#1154a4ac107bf1375112d83a29c5cf97704e96b6"
+  integrity sha512-sSZOb04w3HcnrrXC82NEh/YGCmBuRgR+C1hZgmmv4L6dBz4BkRse6Y8/q/neXer9i95fKUBbFi4KgeceXmbsOA==
   dependencies:
-    bl "^2.2.0"
+    bl "^2.2.1"
     bson "^1.1.4"
     denque "^1.4.1"
     require_optional "^1.0.1"
@@ -119,10 +124,10 @@ mongodb@^3.5.9:
   optionalDependencies:
     saslprep "^1.0.0"
 
-prettier@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.npm.taobao.org/prettier/download/prettier-2.0.5.tgz#d6d56282455243f2f92cc1716692c08aa31522d4"
-  integrity sha1-1tVigkVSQ/L5LMFxZpLAiqMVItQ=
+prettier@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.2.tgz#3050700dae2e4c8b67c4c3f666cdb8af405e1ce5"
+  integrity sha512-16c7K+x4qVlJg9rEbXl7HEGmQyZlG4R9AgP+oHKRMsMsuk8s+ATStlf1NpDqyBI1HpVyfjLOeMhH2LvuNvV5Vg==
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
@@ -191,15 +196,15 @@ string_decoder@~1.1.1:
   dependencies:
     safe-buffer "~5.1.0"
 
-tslib@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npm.taobao.org/tslib/download/tslib-2.0.0.tgz#18d13fc2dce04051e20f074cc8387fd8089ce4f3"
-  integrity sha1-GNE/wtzgQFHiDwdMyDh/2Aic5PM=
+tslib@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.1.tgz#410eb0d113e5b6356490eec749603725b021b43e"
+  integrity sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ==
 
-typescript@^3.9.5:
-  version "3.9.5"
-  resolved "https://registry.npm.taobao.org/typescript/download/typescript-3.9.5.tgz?cache=0&sync_timestamp=1593240570207&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript%2Fdownload%2Ftypescript-3.9.5.tgz#586f0dba300cde8be52dd1ac4f7e1009c1b13f36"
-  integrity sha1-WG8NujAM3ovlLdGsT34QCcGxPzY=
+typescript@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.0.3.tgz#153bbd468ef07725c1df9c77e8b453f8d36abba5"
+  integrity sha512-tEu6DGxGgRJPb/mVPIZ48e69xCn2yRmCgYmDugAVwmJ6o+0u1RI18eO7E7WBTLYLaEVVOhwQmcdhQHweux/WPg==
 
 universalify@^1.0.0:
   version "1.0.0"
