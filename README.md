@@ -42,19 +42,6 @@ yarn build
 yarn start
 ```
 
-# 命令行示例
-
-必选参数 `db`:本地数据库的名称 `string`
-
-必选参数 `collect`:数据库中集合的名称 `string`
-
-可选参数 `mongourl`：mongodb 数据库的 URL
-
-例如： "mongodb://127.0.0.1:27017/?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false"
-
-```shell
-node ./lib/cli.js --db=baidupan --collect=panfile
-```
 
 # 输出重复文件列表举例
 
@@ -82,4 +69,17 @@ type path = string;
         ]
     ]
 ]
+```
+# 命令行示例
+
+必选参数 `db`:本地数据库的名称 `string`
+
+必选参数 `collect`:数据库中集合的名称 `string`
+
+可选参数 `mongourl`：mongodb 数据库的 URL
+
+例如： "mongodb://127.0.0.1:27017/?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false"
+
+```shell
+mongodb-file-find-md5-repeat --db=baidupan --collect=panfile --mongourl=mongodb://127.0.0.1:27017
 ```
