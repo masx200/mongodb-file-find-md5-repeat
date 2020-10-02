@@ -1,40 +1,49 @@
 import { promises as fspromises } from "fs";
 import fsextra from "fs-extra";
 import mongodb from "mongodb";
-import path, { dirname } from "path";
+import path /*, { dirname } */ from "path";
 import prettier from "prettier";
 import process from "process";
-import { fileURLToPath } from "url";
+//import { fileURLToPath } from "url";
+import os from "os";
+//const __filename = fileURLToPath(import.meta.url);
+//const __dirname = dirname(__filename);
+function gettmpfilename() {
+    const logfile = path.resolve(
+        os.tmpdir(),
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const logfile = path.resolve(
-    __dirname,
-    "../",
-    `./output/data-${new Date().getTime()}.json`
-);
+        `./output/data-${new Date().getTime()}.json`
+    );
+    return logfile;
+}
 // const dbname = "pan_masx20";
 // const collectionname = "panfile";
-process.on("unhandledRejection", err => {
+
+/*
+const mongourl= "mongodb://127.0.0.1:27017/?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false"*/
+process.on("unhandledRejection", (err) => {
     throw err;
 });
 export default async function start(
     dbname: string,
-    collectionname: string
-): Promise<string> {
-    return new Promise(r => {
+    collectionname: string,
+    mongourl: string
+): Promise<Array<any>> {
+    const logfile = gettmpfilename();
+    return new Promise((r) => {
         MongoClient.connect(
-            "mongodb://127.0.0.1:27017/?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false",
+            mongourl,
+
             { useNewUrlParser: true, useUnifiedTopology: true },
-            async function(connectErr, client) {
+            async function (connectErr, client) {
                 if (connectErr) {
                     throw connectErr;
                 }
                 const coll = client.db(dbname).collection(collectionname);
-                let readableCursor = coll.find(filter, { sort: sort });
-                await handlecursor(readableCursor);
+                const readableCursor = coll.find(filter, { sort: sort });
+                await handlecursor(readableCursor, logfile);
                 await client.close();
-                r(logfile);
+                r(fsextra.readJson(logfile));
             }
         );
     });
@@ -42,10 +51,13 @@ export default async function start(
 const { MongoClient } = mongodb;
 const filter = {};
 const sort = {
-    md5: 1
+    md5: 1,
 };
 const alldatamap = new Map<string, Set<string>>();
-async function handlecursor(readableCursor: mongodb.Cursor<any>) {
+async function handlecursor(
+    readableCursor: mongodb.Cursor<any>,
+    logfile: string
+) {
     await fsextra.ensureDir(path.dirname(logfile));
     await fspromises.writeFile(logfile, `[`);
     for await (let doc of readableCursor) {
@@ -78,8 +90,7 @@ async function handlecursor(readableCursor: mongodb.Cursor<any>) {
     const jsonstring = (await fspromises.readFile(logfile)).toString();
     const formattedstring = prettier.format(jsonstring, {
         parser: "json",
-        tabWidth: 4
+        tabWidth: 4,
     });
     await fspromises.writeFile(logfile, formattedstring);
-    // process.exit();
 }
