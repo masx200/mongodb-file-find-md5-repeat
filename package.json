@@ -1,4 +1,4 @@
-{
+{"bin":"lib/cli.js",
     "publishConfig": {
         "registry": "https://registry.npmjs.com"
     },
