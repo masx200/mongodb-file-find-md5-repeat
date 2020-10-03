@@ -1,5 +1,5 @@
 export default function start(
-    dbname: string,
-    collectionname: string,
-    mongourl: string
+    dbname?: string,
+    collectionname?: string,
+    mongourl?: string
 ): Promise<Array<any>>;

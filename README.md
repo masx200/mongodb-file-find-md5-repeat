@@ -26,10 +26,10 @@ https://github.com/masx200/mongodb-file-find-md5-repeat
 
 # 安装
 
-
 ```shell
 yarn add @masx200/mongodb-file-find-md5-repeat
 ```
+
 ## 安装 `node_modules`
 
 ```shell
@@ -47,7 +47,6 @@ yarn build
 ```shell
 yarn start
 ```
-
 
 # 输出重复文件列表举例
 
@@ -76,4 +75,3 @@ type path = string;
     ]
 ]
 ```
-

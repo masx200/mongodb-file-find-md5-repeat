@@ -25,9 +25,9 @@ process.on("unhandledRejection", (err) => {
     throw err;
 });
 export default async function start(
-    dbname: string="baidupan",
-    collectionname: string="panfile",
-    mongourl: string="mongodb://127.0.0.1:27017/"
+    dbname: string = "baidupan",
+    collectionname: string = "panfile",
+    mongourl: string = "mongodb://127.0.0.1:27017/"
 ): Promise<Array<any>> {
     const logfile = gettmpfilename();
     return new Promise((r) => {
