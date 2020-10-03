@@ -1,11 +1,11 @@
 {
-    "bin": "lib/cli.js",
+    
     "publishConfig": {
         "registry": "https://registry.npmjs.com"
     },
     "type": "module",
     "name": "@masx200/mongodb-file-find-md5-repeat",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "types": "lib/index.d.ts",
     "main": "lib/index.js",
     "license": "MIT",
