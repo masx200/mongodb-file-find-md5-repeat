@@ -26,7 +26,7 @@
     "scripts": {
         "prettier": "prettier --write *.json *.md */*.js ./**/*.ts",
         "build": "tsc",
-        "start": "node --experimental-modules lib/cli.js"
+        "test": "node --experimental-modules lib/test.js"
     },
     "keywords": [],
     "author": "masx200 <34191203+masx200@users.noreply.github.com>",

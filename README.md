@@ -45,7 +45,7 @@ yarn build
 ## 运行脚本
 
 ```shell
-yarn start
+yarn test
 ```
 
 # 输出重复文件列表举例
