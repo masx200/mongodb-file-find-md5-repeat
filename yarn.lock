@@ -8,9 +8,9 @@
   integrity sha512-9/TlfQTz0JP8GRhrP/XP9Db0FndaQrrg4hYF4RMpCoh3mhd9+7ETUUpiXOPMKD23nI38wWZcSOf33wNpRcH2RQ==
 
 "@types/fs-extra@^9.0.1":
-  version "9.0.1"
-  resolved "https://registry.npm.taobao.org/@types/fs-extra/download/@types/fs-extra-9.0.1.tgz#91c8fc4c51f6d5dbe44c2ca9ab09310bd00c7918"
-  integrity sha1-kcj8TFH21dvkTCypqwkxC9AMeRg=
+  version "9.0.13"
+  resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-9.0.13.tgz#7594fbae04fe7f1918ce8b3d213f74ff44ac1f45"
+  integrity sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA==
   dependencies:
     "@types/node" "*"
 
