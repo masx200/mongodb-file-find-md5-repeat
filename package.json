@@ -10,7 +10,7 @@
     "license": "MIT",
     "dependencies": {
         "@masx200/mini-cli-args-parser": "^1.0.5",
-        "@types/fs-extra": "^9.0.1",
+        "@types/fs-extra": "^11.0.0",
         "@types/mongodb": "^4.0.7",
         "@types/node": "^18.0.3",
         "@types/prettier": "^2.1.1",
